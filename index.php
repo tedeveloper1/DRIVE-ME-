@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/2a421485f4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/script/script.js"></script>
     <title>Drive Me</title>
 </head>
 <body>
@@ -36,7 +37,7 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        <a class="btn" href="form.html">Login</a>
+        <a class="btn" href="login.php">Login</a>
     </section>
     <footer>
         <div class="social-icons">
@@ -48,7 +49,7 @@
         </div>
         <div class="navbar">
             <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">User</a></li>
             <li><a href="#">Help center</a></li>

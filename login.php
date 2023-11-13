@@ -4,73 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a421485f4.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="/assets/css/form.css">
+     <link rel="stylesheet" href="assets/css/form.css">
+     <script src="assets/script/script.js"></script>
     <title>Login here</title>
 </head>
 <body>
-    <header>
+<header>
         <a href="#" class="logo">Drive Me</a>
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
         <div class="nav-bar">
             <ul>
-                <li><a href="/index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="index.php"><i class="fa-solid fa-house"></i>Home</a></li>
                 <li><a href="#"><i class="fa-solid fa-handshake"></i>Services</a></li>
                 <li><a href="#"><i class="fa-solid fa-motorcycle"></i>Moto</a></li>
-                <li><a href="#"><i class="fa-solid fa-taxi"></i>Taxi</a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i>User</a></li>
+                <li><a href="login.php" onclick="login()">sign in</a></li>
+                <li><a href="register.php" onclick="register()">sign up</a></li>
             </ul>
         </div>
     </header>
-
     <section>
-        <div class="form-box">
-            <div class="registration-form" id="reg">
+     <!------------------- FORM-LOGIN-------------------------------->
+    <div class="form-box">
+        <form action="" method="post">
+            <div class="login-form" id="login">
               <div class="top">
-                <span>Have an account?<a href="#" onclick="login()">Login</a></span>
-                <header>Sign up</header>
+                <span>Do'nt have an account?<a href="register.php" onclick="login()">Sign up</a></span>
+                <header>Login</header>
               </div>
               <div class="two-forms">
                 <div class="input-box">
-                    <input type="text" class="input-field" name="fname" placeholder="Firstname">
+                    <input type="text" class="input-field" name="fname" placeholder="Username">
                     <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" name="lname" placeholder="Lastname">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" name="email" placeholder="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" name="phone" placeholder="Phone">
-                    <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="input-box">
                     <input type="password" class="input-field" name="password" placeholder="Password">
                     <i class="fa-solid fa-key"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" name="Comfirm Password" placeholder="Comfirm Password">
-                    <i class="fa-solid fa-key"></i>
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="submit" name="register" value="register">
+                    <input type="submit" class="submit" name="login" value="Login">
                 </div>
                 <div class="two-col">
                     <div class="one">
-                        <input type="checkbox" name="register-check" value="register-check">
-                        <label for="register-check">Remember Me</label>
+                        <input type="checkbox" name="register-check" value="login-check">
+                        <label for="login-check">Remember Me</label>
                     </div>
                     <div class="two">
-                        <label><a href="#">Terms & Conditions</a></label>
+                        <label><a href="#">Forgot password?</a></label>
                     </div>
                 </div>
               </div>
             </div>
-        </div>
-    </section>
+</div>
+        </form>
+
+           <!---------------------- FOOTER ------------------------->
 
     <footer>
         <div class="social-icons">
@@ -82,7 +70,7 @@
         </div>
         <div class="navbar">
             <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">User</a></li>
             <li><a href="#">Help center</a></li>
