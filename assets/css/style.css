@@ -7,7 +7,7 @@
 }
 body{
     min-height: 100vh;
-    background: url(/assets/images/bck.jpg) no-repeat;
+    background: url(assets/images/bck.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }

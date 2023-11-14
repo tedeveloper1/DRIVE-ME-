@@ -1,10 +1,32 @@
+<?php
+require 'connection.php';
+
+if(isset($_POST['submit'])){
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $password=$_POST['password'];
+    $Comfirm_Password=$_POST['Comfirm_Password'];
+    $insert=$conn->query("INSERT INTO customers(fname,lname,email,phone,password,comfirm_password) VALUES('$fname','$lname','$email','$phone','$password','$comfirm_password')");
+    
+if($insert){
+    header("location:customers_sin_in.php");
+}
+
+
+
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a421485f4.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="/assets/css/form.css">
+     <link rel="stylesheet" href="assets/css/form.css">
     <title>Login here</title>
 </head>
 <body>
@@ -14,7 +36,7 @@
         <label for="menu-bar"><i class="fa-solid fa-bars"></i></label>
         <div class="nav-bar">
             <ul>
-                <li><a href="/index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="index.php"><i class="fa-solid fa-house"></i>Home</a></li>
                 <li><a href="#"><i class="fa-solid fa-handshake"></i>Services</a></li>
                 <li><a href="#"><i class="fa-solid fa-motorcycle"></i>Moto</a></li>
                 <li><a href="#"><i class="fa-solid fa-taxi"></i>Taxi</a></li>
@@ -24,10 +46,11 @@
     </header>
 
     <section>
+        <form   method="POST">
         <div class="form-box">
             <div class="registration-form" id="reg">
               <div class="top">
-                <span>Have an account?<a href="#" onclick="login()">Login</a></span>
+                <span>Have an account?<a href="customers_sin_in.php" onclick="login()">Login</a></span>
                 <header>Sign up</header>
               </div>
               <div class="two-forms">
@@ -52,11 +75,11 @@
                     <i class="fa-solid fa-key"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" class="input-field" name="Comfirm Password" placeholder="Comfirm Password">
+                    <input type="password" class="input-field" name="Comfirm_Password" placeholder="Comfirm Password">
                     <i class="fa-solid fa-key"></i>
                 </div>
                 <div class="input-box">
-                    <input type="submit" class="submit" name="register" value="register">
+                    <input type="submit" class="submit" name="submit" value="register">
                 </div>
                 <div class="two-col">
                     <div class="one">
@@ -70,6 +93,7 @@
               </div>
             </div>
         </div>
+        </form>
     </section>
 
     <footer>
@@ -89,7 +113,8 @@
         </ul>
         <div class="languages"></div>
         <div class="lst">
-            <p>Copyright &copy;2023;Designed by <span class="designer">DM group</span></p>
+            <p>Copyright &copy;<?php echo date("Y"); ?>Designed by <span class="designer">DM group</span></p>
+           
         </div>
         </div>
     </footer>
