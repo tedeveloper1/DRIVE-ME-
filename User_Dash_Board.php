@@ -3,9 +3,9 @@ include 'connection.php';
 session_start();
 
 // Check if the user is not logged in, redirect to the login page
-if (!isset($_SESSION['id'])) {
-    header("Location: customers_sin_in.php");
-    exit();
+if (!isset($_SESSION['email'])) {
+    header("Location: ");
+
 }
 
 // Other dashboard logic goes here
@@ -23,6 +23,7 @@ if (!isset($_SESSION['id'])) {
     <title>Document</title>
 </head>
 <body>
+    <h1><?php echo $_SESSION['email'];?></h1>
     <button><a href="logout.php">logout</a></button>
 </body>
 </html>

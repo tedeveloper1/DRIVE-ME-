@@ -26,7 +26,7 @@ $stmt -> store_result();
 if ($stmt->fetch())  //fetching the contents of the row
 {
     
-	$_SESSION['customers_sin_in']=$email; // Initializing Session
+	$_SESSION['email']=$email; // Initializing Session
 	header("location:User_Dash_Board.php");// Redirecting To Other Page
 } else {
   $error = "Username or Password is invalid";
